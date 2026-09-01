@@ -4,40 +4,25 @@ import './scss/HomeView.scss';
 export class HomeView {
 
 constructor () {
-this.Header = `
+    this.Header = ['Сегодня', 'Белок'];
+}
+
+set Header([setToday, setProtein]) {
+    this._Header = `
     <header class="header">
         <div>
-            <div class="greeting">Сегодня</div>
-            <h1>Белок</h1>
+            <div class="greeting">${setToday}</div>
+            <h1>${setProtein}</h1>
         </div>
 
         <button class="icon-button">⚙</button>
     </header>`;
 }
 
+
+
 render() {
-    return this.Header;
+    return this._Header;
 }
 
 }
-
-
-// export default class SetInput {
-//     constructor(id, text) {
-//         this.id = id;
-//         this.text = text;
-//     }
-
-//     render() {
-//         return `
-//             <div>
-//                 <input
-//                     type="text"
-//                     id="${this.id}"
-//                     name="index"
-//                     placeholder="${this.text}"
-//                 >
-//             </div>
-//         `;
-//     }
-// }

@@ -1,0 +1,100 @@
+
+/* PROGRESS CARD */
+
+.progress-card {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+
+    background: var(--card);
+    border-radius: 25px;
+    padding: 25px;
+
+    box-shadow: 0 8px 30px rgba(20, 35, 45, 0.06);
+    margin-bottom: 30px;
+    .progress-circle {
+        width: 125px;
+        height: 125px;
+        border-radius: 50%;    
+
+        background:
+            conic-gradient(
+                var(--accent) 0deg 263deg,
+                #edf1f2 263deg 360deg
+            );    
+
+        display: flex;
+        align-items: center;
+        justify-content: center;    
+
+        flex-shrink: 0;
+        .circle-inner {
+                width: 99px;
+                height: 99px;
+                border-radius: 50%;
+                background: white;
+            
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+            }
+            
+            .circle-inner strong {
+                font-size: 28px;
+               line-height: 1;
+            }
+
+            .circle-inner span {
+                color: var(--secondary);
+                font-size: 12px;
+                margin-top: 5px;
+            }
+    }
+    .progress-info {
+        flex: 1;
+        .label {
+            color: var(--secondary);
+            font-size: 13px;
+        }  
+        .big-number {
+            font-size: 32px;
+            font-weight: 750;
+            margin: 3px 0;
+        }  
+        .big-number small {
+            font-size: 17px;
+            font-weight: 500;
+        }
+        .remaining {
+            color: var(--secondary);
+            font-size: 13px;
+            margin-bottom: 13px;
+        }
+        .big-number small {
+            font-size: 17px;
+            font-weight: 500;
+        }
+        .progress-bar {
+            height: 7px;
+            background: #edf1f2;
+            border-radius: 20px;
+            overflow: hidden;
+            .progress-value {
+                width: 73%;
+                height: 100%;
+                background: var(--accent);
+                border-radius: 20px;
+            }
+        }
+        .percent {
+            display: block;
+            text-align: right;
+            font-size: 11px;
+            color: var(--secondary);
+            margin-top: 4px;
+        }
+
+    }
+
+}
