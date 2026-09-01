@@ -1,5 +1,5 @@
 
-export default class HomeView {
+export class HomeView {
 
 constructor () {
 this.Header = `
@@ -14,7 +14,7 @@ this.Header = `
 }
 
 render() {
-    this.Header;
+    return this.Header;
 }
 
 }
