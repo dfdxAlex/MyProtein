@@ -1,5 +1,4 @@
-import { defineConfig } from 'vite'
+export default {
+  base: '/MyProtein/', // имя репозитория
+}
 
-export default defineConfig({
-  base: '/MyProtein/'
-})
