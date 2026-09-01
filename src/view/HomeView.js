@@ -1,4 +1,6 @@
 
+import './scss/HomeView.scss';
+
 export class HomeView {
 
 constructor () {
