@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Protein Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="app">
+
+    <!-- Header -->
+    <header class="header">
+        <div>
+            <div class="greeting">Сегодня</div>
+            <h1>Белок</h1>
+        </div>
+
+        <button class="icon-button">⚙</button>
+    </header>
+
+
+    <!-- Main progress card -->
+    <section class="progress-card">
+
+        <div class="progress-circle">
+            <div class="circle-inner">
+                <strong>87</strong>
+                <span>из 120 г</span>
+            </div>
+        </div>
+
+        <div class="progress-info">
+            <span class="label">Цель на сегодня</span>
+
+            <div class="big-number">
+                87 <small>г</small>
+            </div>
+
+            <div class="remaining">
+                Осталось <strong>33 г</strong>
+            </div>
+
+            <div class="progress-bar">
+                <div class="progress-value"></div>
+            </div>
+
+            <span class="percent">73%</span>
+        </div>
+
+    </section>
+
+
+    <!-- Quick add -->
+    <section class="quick-section">
+
+        <div class="section-title">
+            <h2>Быстро добавить</h2>
+        </div>
+
+        <div class="quick-list">
+
+            <button class="quick-item">
+                <span class="food-icon">🥚</span>
+                <span>
+                    <strong>Яйцо</strong>
+                    <small>+ 6 г</small>
+                </span>
+            </button>
+
+            <button class="quick-item">
+                <span class="food-icon">🍗</span>
+                <span>
+                    <strong>Курица</strong>
+                    <small>+ 23 г</small>
+                </span>
+            </button>
+
+            <button class="quick-item">
+                <span class="food-icon">🥛</span>
+                <span>
+                    <strong>Творог</strong>
+                    <small>+ 18 г</small>
+                </span>
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- Today's food -->
+    <section class="food-section">
+
+        <div class="section-title">
+            <h2>Сегодня</h2>
+            <span>87 г</span>
+        </div>
+
+        <div class="food-list">
+
+            <div class="food-row">
+                <div class="food-left">
+                    <div class="food-avatar">🍗</div>
+
+                    <div>
+                        <strong>Куриная грудка</strong>
+                        <small>200 г</small>
+                    </div>
+                </div>
+
+                <strong class="protein">46 г</strong>
+            </div>
+
+
+            <div class="food-row">
+                <div class="food-left">
+                    <div class="food-avatar">🥚</div>
+
+                    <div>
+                        <strong>Яйца</strong>
+                        <small>3 шт.</small>
+                    </div>
+                </div>
+
+                <strong class="protein">19 г</strong>
+            </div>
+
+
+            <div class="food-row">
+                <div class="food-left">
+                    <div class="food-avatar">🥛</div>
+
+                    <div>
+                        <strong>Творог</strong>
+                        <small>120 г</small>
+                    </div>
+                </div>
+
+                <strong class="protein">22 г</strong>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Add button -->
+    <button class="add-button">
+        <span>+</span>
+        Добавить продукт
+    </button>
+
+
+    <!-- Bottom navigation -->
+    <nav class="bottom-nav">
+
+        <button class="nav-item active">
+            <span>◉</span>
+            Сегодня
+        </button>
+
+        <button class="nav-item">
+            <span>☷</span>
+            Продукты
+        </button>
+
+        <button class="nav-item">
+            <span>▥</span>
+            История
+        </button>
+
+    </nav>
+
+</div>
+
+</body>
+</html>
