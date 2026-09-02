@@ -48,7 +48,7 @@ this.#progress();
     return `
     <section class="progress-card">
 
-                <div class="progress-circle">
+                <div class="progress-card progress-card--circle">
                     <div class="circle-inner">
                         <strong>${this.availability}</strong>
                         <span>из ${this.norm+' '+this.gramm}</span>
