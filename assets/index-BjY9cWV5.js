@@ -9,7 +9,7 @@ var e=(e,t,n)=>()=>{if(n)throw n[0];try{return e&&(t=e(e=0)),t}catch(e){throw n=
     </header>`}render(){return this._Header}}})),a=e((()=>{})),o,s=e((()=>{a(),o=class{constructor(){this.Progress=[90,120,`г`,`Цель на сегодня`,`Осталось`]}set Progress([e,t,n,r,i]){if(typeof t==`number`&&t>0)this.norm=t;else throw Error(`Неверное значение norm`);if(typeof e==`number`&&e>0&&e<=this.norm)this.availability=e;else throw Error(`Неверное значение availability`);if(typeof n==`string`)this.gramm=n;else throw Error(`Неверное значение gramm`);if(typeof r==`string`)this.goal=r;else throw Error(`Неверное значение goal`);if(typeof i==`string`)this.left=i;else throw Error(`Неверное значение left`);this.progressValue=Math.round(this.availability*100/this.norm),this.#e()}#e(){this._Progress=this.#t()}#t(){return`
     <section class="progress-card">
 
-                <div class="progress-circle">
+                <div class="progress-card progress-card--circle">
                     <div class="circle-inner">
                         <strong>${this.availability}</strong>
                         <span>из ${this.norm+` `+this.gramm}</span>
@@ -59,4 +59,4 @@ var e=(e,t,n)=>()=>{if(n)throw n[0];try{return e&&(t=e(e=0)),t}catch(e){throw n=
             // The ProgressDeg getter returns the number of degrees on a pie chart
 
             // The ProgressValue getter returns the number of percents on a horizontal bar
-        `)}}}));t((()=>{i(),s();var e=new r,t=new o;t.Progress=[15,150,`г`,`Цель на сегодня`,`Ещё`];var n=e.render()+t.render();document.querySelector(`#app`).innerHTML=n,document.querySelector(`.progress-circle`).style.setProperty(`--progress-circle`,t.ProgressDeg),document.querySelector(`.progress-value`).style.setProperty(`--progress-bar`,t.ProgressValue)}))();
+        `)}}}));t((()=>{i(),s();var e=new r,t=new o;t.Progress=[15,150,`г`,`Цель на сегодня`,`Ещё`];var n=e.render()+t.render();document.querySelector(`#app`).innerHTML=n,document.querySelector(`.progress-card--circle`).style.setProperty(`--progress-circle`,t.ProgressDeg),document.querySelector(`.progress-value`).style.setProperty(`--progress-bar`,t.ProgressValue)}))();
