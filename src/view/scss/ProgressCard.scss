@@ -29,7 +29,6 @@
                 #edf1f2 var(--progress-circle) 360deg
             );    
         flex-shrink: 0;
-
         div {
             @include center;
             width: 99px;
@@ -37,12 +36,10 @@
             border-radius: 50%;
             background: white;
             flex-direction: column;
-
             strong {
                 font-size: 28px;
                 line-height: 1;
             }
-
             span {
                 color: var(--secondary);
                 font-size: 12px;
@@ -50,9 +47,7 @@
             }
         }
     }
-
     .progress-info {
-
         flex: 1;
         .label {
             color: var(--secondary);
@@ -91,11 +86,5 @@
             color: var(--secondary);
             margin-top: 4px;
         }
-
     }
-
 }
-
-
-
-// перейти остальными вложенными стилями к идентификаторам.
