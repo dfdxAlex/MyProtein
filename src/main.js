@@ -5,7 +5,7 @@ const view = new HomeView();
 // view.Header = ['Завтра', 'Помидор'];
 
 const progressCard = new ProgressCard();
-progressCard.Progress = [15, 150,'г','Цель на сегодня', 'Ещё'];
+progressCard.Progress = [55, 150,'г','Цель на сегодня', 'Ещё'];
 
 
 const renderHtml = view.render() + progressCard.render();

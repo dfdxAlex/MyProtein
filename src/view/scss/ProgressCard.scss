@@ -1,9 +1,14 @@
 @import 'variables.scss';
 /* PROGRESS CARD */
 
-.progress-card {
+@mixin center {
     display: flex;
     align-items: center;
+    justify-content: center;
+}
+
+.progress-card {
+    @include center;
     gap: 24px;
 
     background: var(--card);
@@ -13,7 +18,41 @@
     box-shadow: 0 8px 30px rgba(20, 35, 45, 0.06);
     margin-bottom: 30px;
 
+    .progress-card--circle {
+        @include center;
+        width: 125px;
+        height: 125px;
+        border-radius: 50%;    
+        background:
+            conic-gradient(
+                var(--accent) 0deg var(--progress-circle),
+                #edf1f2 var(--progress-circle) 360deg
+            );    
+        flex-shrink: 0;
+
+        div {
+            @include center;
+            width: 99px;
+            height: 99px;
+            border-radius: 50%;
+            background: white;
+            flex-direction: column;
+
+            strong {
+                font-size: 28px;
+                line-height: 1;
+            }
+
+            span {
+                color: var(--secondary);
+                font-size: 12px;
+                margin-top: 5px;
+            }
+        }
+    }
+
     .progress-info {
+
         flex: 1;
         .label {
             color: var(--secondary);
@@ -57,41 +96,6 @@
 
 }
 
+
+
 // перейти остальными вложенными стилями к идентификаторам.
-.progress-card--circle {
-    width: 125px;
-    height: 125px;
-    border-radius: 50%;    
-
-    background:
-        conic-gradient(
-            var(--accent) 0deg var(--progress-circle),
-            #edf1f2 var(--progress-circle) 360deg
-        );    
-
-    justify-content: center;    
-
-    flex-shrink: 0;
-    .circle-inner {
-            width: 99px;
-            height: 99px;
-            border-radius: 50%;
-            background: white;
-        
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-        }
-        
-        .circle-inner strong {
-            font-size: 28px;
-            line-height: 1;
-        }
-
-        .circle-inner span {
-            color: var(--secondary);
-            font-size: 12px;
-            margin-top: 5px;
-        }
-}
