@@ -57,7 +57,7 @@ var e=(e,t,n)=>()=>{if(n)throw n[0];try{return e&&(t=e(e=0)),t}catch(e){throw n=
             // The ProgressDeg getter returns the number of degrees on a pie chart
 
             // The ProgressValue getter returns the number of percents on a horizontal bar
-        `)}}})),c=e((()=>{})),l,u=e((()=>{c(),l=class{foodItems=[];constructor(e){this.meatProducts=e,this.foodItems.push({icon:`🥚`,name:`Яйцо`,protein:12.5,fat:10.5,carbs:1,fiber:0,calories:155},{icon:`🍗`,name:`Курица`,protein:23,fat:2,carbs:0,fiber:0,calories:110},{icon:`🥛`,name:`Творог`,protein:18,fat:5,carbs:3,fiber:0,calories:145}),this.foodItems.push({icon:`🥚`,name:`Яйцо`,protein:12.5,fat:10.5,carbs:1,fiber:0,calories:155},{icon:`🍗`,name:`Курица`,protein:23,fat:2,carbs:0,fiber:0,calories:110},{icon:`🥛`,name:`Творог`,protein:18,fat:5,carbs:3,fiber:0,calories:145}),console.log(this.foodItems)}#e(){return`
+        `)}}})),c=e((()=>{})),l,u=e((()=>{c(),l=class{foodItems=[];constructor(e){this.meatProducts=e,this.foodItems.push({icon:`🥚`,name:`Яйцо`,protein:12.5,fat:10.5,carbs:1,fiber:0,calories:155},{icon:`🍗`,name:`Курица`,protein:23,fat:2,carbs:0,fiber:0,calories:110},{icon:`🥛`,name:`Творог`,protein:18,fat:5,carbs:3,fiber:0,calories:145}),console.log(this.foodItems)}#e(){return`
         <section class="quick-section">
             <div class="section-title">
                 <h2>Быстро добавить</h2>
