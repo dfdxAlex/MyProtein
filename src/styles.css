@@ -11,7 +11,7 @@
     --secondary: #89939f;
     --border: #edf0f2;
     --accent: #45c98a;
-    --accent-dark: #24aa6d;
+    
 }
 
 body {
@@ -36,68 +36,6 @@ body {
 section {
     margin-bottom: 28px;
 }
-
-.section-title {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 13px;
-}
-
-.section-title h2 {
-    font-size: 18px;
-}
-
-.section-title span {
-    color: var(--accent-dark);
-    font-weight: 650;
-    font-size: 14px;
-}
-
-
-/* QUICK ADD */
-
-.quick-list {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 10px;
-}
-
-.quick-item {
-    border: none;
-    background: white;
-    border-radius: 18px;
-    padding: 14px 8px;
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    cursor: pointer;
-    transition: 0.2s;
-}
-
-.quick-item:hover {
-    transform: translateY(-2px);
-}
-
-.food-icon {
-    font-size: 28px;
-    margin-bottom: 7px;
-}
-
-.quick-item strong {
-    display: block;
-    font-size: 13px;
-}
-
-.quick-item small {
-    display: block;
-    color: var(--accent-dark);
-    font-size: 12px;
-    margin-top: 3px;
-}
-
 
 /* FOOD LIST */
 

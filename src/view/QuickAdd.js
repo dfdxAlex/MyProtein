@@ -1,4 +1,4 @@
-
+import './scss/QuickAdd.scss';
 
 export class QuickAdd {
 
@@ -10,6 +10,35 @@ constructor (meatProducts) {
 
     this.meatProducts = meatProducts;
     
+    this.foodItems.push({
+        icon : '🥚',
+        name : 'Яйцо',
+        protein : 12.5,
+        fat : 10.5,
+        carbs : 1,
+        fiber : 0,
+        calories : 155
+    },
+    {
+        icon : '🍗',
+        name : 'Курица',
+        protein : 23,
+        fat : 2,
+        carbs : 0,
+        fiber : 0,
+        calories : 110
+    },
+    {
+        icon : '🥛',
+        name : 'Творог',
+        protein : 18,
+        fat : 5,
+        carbs : 3,
+        fiber : 0,
+        calories : 145
+    }
+);
+
     this.foodItems.push({
         icon : '🥚',
         name : 'Яйцо',
