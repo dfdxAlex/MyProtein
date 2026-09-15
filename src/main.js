@@ -1,7 +1,7 @@
-import {HomeView} from './view/HomeView.js';
-import {ProgressCard} from './view/ProgressCard.js';
-import {QuickAdd} from './view/QuickAdd.js';
-import { meatProducts } from './model/meatProducts.js';
+import {HomeView} from './views/HomeView.js';
+import {ProgressCard} from './views/ProgressCard.js';
+import {QuickAdd} from './views/QuickAdd.js';
+import { meatProducts } from './models/meatProducts.js';
 
 // const view = new HomeView();
 // view.Header = ['Завтра', 'Помидор'];
