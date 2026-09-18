@@ -1,15 +1,15 @@
-import {HomeView} from './views/HomeView.js';
-import {ProgressCard} from './views/ProgressCard.js';
-import {QuickAdd} from './views/QuickAdd.js';
+import { ProgressCard } from './views/ProgressCard.js';
+import { QuickAdd } from './views/QuickAdd.js';
 import { meatProducts } from './models/meatProducts.js';
+import { ControllerMenuUp } from './controllers/ControllerMenuUp.js';
 
-// const view = new HomeView();
-// view.Header = ['Завтра', 'Помидор'];
+
+new ControllerMenuUp();
 
 const progressCard = new ProgressCard();
 progressCard.Progress = [55, 150,'г','Цель на сегодня', 'Ещё'];
 
-const renderHtml = new HomeView().render() + progressCard.render() + new QuickAdd(meatProducts).render();
+const renderHtml = progressCard.render() + new QuickAdd(meatProducts).render();
 document.querySelector('#app').innerHTML = renderHtml;
 
 
