@@ -74,7 +74,7 @@ constructor (meatProducts) {
 }
 
 render() {
-    return this.#buildingQuickAdd();
+    document.querySelector('#quick-add').innerHTML = this.#buildingQuickAdd();
 }
 
 }
