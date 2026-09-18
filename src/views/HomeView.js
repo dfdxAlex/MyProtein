@@ -19,11 +19,8 @@ set Header([setToday, setProtein]) {
     </header>`;
 }
 
-
-
 render() {
     document.querySelector('#menu-up').innerHTML = this._Header;
-    return this._Header;
 }
 
 }

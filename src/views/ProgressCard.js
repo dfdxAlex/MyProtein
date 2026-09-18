@@ -84,7 +84,7 @@ get ProgressValue() {
 }
 
 render() {
-    return this._Progress;
+    document.querySelector('#progress-card').innerHTML = this._Progress;
 }
 
 
