@@ -39,7 +39,8 @@ constructor (meatProducts) {
     }
 );
 
-    console.log(this.foodItems);
+    
+    console.log(JSON.parse(JSON.stringify(this.foodItems)));
 
 }
 
