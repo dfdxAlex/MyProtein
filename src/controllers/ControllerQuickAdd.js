@@ -1,11 +1,12 @@
 import { QuickAdd } from "../views/QuickAdd";
-import { meatProducts } from '../models/meatProducts';
+import { Products } from '../models/Products.js';
+import { StorageService } from '../models/StorageService.js';
 
 
 export class ControllerQuickAdd {
 
     constructor () {
-        new QuickAdd(meatProducts).render();
+        const menuQuickAdd = new QuickAdd().render(new Products().startProducts());
     }
 
 }

@@ -2,56 +2,9 @@ import './scss/QuickAdd.scss';
 
 export class QuickAdd {
 
-foodItems = [];
-
-constructor (meatProducts) {
-
-    
-
-    this.meatProducts = meatProducts;
-    
-    this.foodItems.push({
-        icon : '🥚',
-        name : 'Яйцо',
-        protein : 12.5,
-        fat : 10.5,
-        carbs : 1,
-        fiber : 0,
-        calories : 155
-    },
-    {
-        icon : '🍗',
-        name : 'Курица',
-        protein : 23,
-        fat : 2,
-        carbs : 0,
-        fiber : 0,
-        calories : 110
-    },
-    {
-        icon : '🥛',
-        name : 'Творог',
-        protein : 18,
-        fat : 5,
-        carbs : 3,
-        fiber : 0,
-        calories : 145
-    }
-);
-
-    
-    console.log(JSON.parse(JSON.stringify(this.foodItems)));
-
-}
-
-// set Progress () {
-
-
-// }
-
-
-#buildingQuickAdd() {
-    let rezultStr = this.foodItems.reduce((str = '', curr) => {
+#buildingQuickAdd(foodItems) {
+    let rezultStr = foodItems.reduce((str = '', curr) => {
+        if (curr.icon !== '➕' && curr.icon !== '➖')
         return(str + `  <button class="quick-item">
                             <span class="food-icon">${curr.icon}</span>
                             <span>
@@ -60,6 +13,15 @@ constructor (meatProducts) {
                             </span>
                         </button>
                     `);
+        else {
+        return(str + `  <button class="quick-item">
+                            <span class="food-icon">${curr.icon}</span>
+                            <span>
+                                <strong>${curr.name}</strong>
+                            </span>
+                        </button>
+                    `);    
+        }
     },'');
     return `
         <section class="quick-section">
@@ -74,8 +36,8 @@ constructor (meatProducts) {
     `;
 }
 
-render() {
-    document.querySelector('#quick-add').innerHTML = this.#buildingQuickAdd();
+render(foodItems) {
+    document.querySelector('#quick-add').innerHTML = this.#buildingQuickAdd(foodItems);
 }
 
 }
