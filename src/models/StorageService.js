@@ -3,16 +3,13 @@ export class StorageService {
     get(key) {
         let data = localStorage.getItem(key);
 
-        if (typeof data !== 'string') {
-            localStorage.setItem(key,  JSON.stringify(''));
-            throw new Error('localStorage не JSON');
-        }
+        if (typeof data === null) return null;
 
         try {
             return JSON.parse(data);
         } catch (e) {
             localStorage.setItem(key, JSON.stringify(''));
-            console.log(e);
+            console.warm(e);
         }
     }
 
