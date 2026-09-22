@@ -1,12 +1,11 @@
 import { ControllerMenuUp } from './controllers/ControllerMenuUp.js';
 import { ControllerProgressCard } from './controllers/ControllerProgressCard.js';
 import { ControllerQuickAdd } from './controllers/ControllerQuickAdd.js';
-import { StorageService } from './models/StorageService.js';
 
 
-new ControllerMenuUp();
-new ControllerProgressCard();
-new ControllerQuickAdd();
+new ControllerMenuUp().init();
+new ControllerProgressCard().init();
+new ControllerQuickAdd().init();
 
 
 //localStorage.getItem("quickMenu"); Содержит строку с массивом объектов для кнопок быстрого меню

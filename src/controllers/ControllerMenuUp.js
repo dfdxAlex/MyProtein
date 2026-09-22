@@ -3,7 +3,11 @@ import { HomeView } from "../views/HomeView";
 export class ControllerMenuUp {
 
     constructor () {
-        new HomeView().render();
+        this.homeWiev = new HomeView();
+    }
+
+    init() {
+        this.homeWiev.render();
     }
 
 }
