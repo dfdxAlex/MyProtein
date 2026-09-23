@@ -10,6 +10,7 @@ render() {
             <button class="category-btn" data-category-btn>
                 <span class="cat-icon">📂</span>
                 <strong>Категории</strong>
+                <span class="cat-close"></span>
             </button>
             
             <div class="category-menu" data-category-menu>
@@ -63,11 +64,14 @@ render() {
                         </label>
                     </li>
                 </ul>
-                <button class="category-btn">
-                    <span class="cat-icon">Показать</span>
-                </button>
+            <button class="category-btn">
+                <span class="cat-icon">Показать</span>
+            </button>
             </div>
+
         </div>
+
+
         `);
 }
 }
