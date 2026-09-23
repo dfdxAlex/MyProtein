@@ -100,10 +100,11 @@ var e=(e,t,n)=>()=>{if(n)throw n[0];try{return e&&(t=e(e=0)),t}catch(e){throw n=
             <button class="category-btn" data-category-btn>
                 <span class="cat-icon">📂</span>
                 <strong>Категории</strong>
-                <span class="cat-close"></span>
+                <button class="cat-close"></button>
             </button>
             
             <div class="category-menu" data-category-menu>
+            
                 <ul class="category-list">
                     <li class="category-item">
                         <label>
