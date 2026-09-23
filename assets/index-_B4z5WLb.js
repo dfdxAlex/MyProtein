@@ -100,6 +100,7 @@ var e=(e,t,n)=>()=>{if(n)throw n[0];try{return e&&(t=e(e=0)),t}catch(e){throw n=
             <button class="category-btn" data-category-btn>
                 <span class="cat-icon">📂</span>
                 <strong>Категории</strong>
+                <span class="cat-close"></span>
             </button>
             
             <div class="category-menu" data-category-menu>
@@ -153,9 +154,12 @@ var e=(e,t,n)=>()=>{if(n)throw n[0];try{return e&&(t=e(e=0)),t}catch(e){throw n=
                         </label>
                     </li>
                 </ul>
-                <button class="category-btn">
-                    <span class="cat-icon">Показать</span>
-                </button>
+            <button class="category-btn">
+                <span class="cat-icon">Показать</span>
+            </button>
             </div>
+
         </div>
+
+
         `}}})),w,T=e((()=>{m(),b(),C(),w=class{constructor(){this.quickAdd=new p,this.quickMenuModel=new y,this.quickMenuItemsWievCategor=new S}init(){let e=this.quickMenuModel.get(`quickMenu`);this.quickAdd.render(e),this.quickAdd.injectQuickMenuItemsWievCategor(this.quickMenuItemsWievCategor.render()),this.quickAdd.bindEvents()}}})),E,D=e((()=>{g(),v(),E=class{constructor(){this.products=new h,this.storageService=new _}init(){if(this.storageService.get(`quickMenu`)===null){let e=this.products.startProducts();this.storageService.set(`quickMenu`,e)}}}}));t((()=>{o(),d(),T(),D(),new E().init(),new a().init(),new u().init(),new w().init()}))();
