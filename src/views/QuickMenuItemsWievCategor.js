@@ -10,10 +10,11 @@ render() {
             <button class="category-btn" data-category-btn>
                 <span class="cat-icon">📂</span>
                 <strong>Категории</strong>
-                <span class="cat-close"></span>
+                <button class="cat-close"></button>
             </button>
             
             <div class="category-menu" data-category-menu>
+            
                 <ul class="category-list">
                     <li class="category-item">
                         <label>
