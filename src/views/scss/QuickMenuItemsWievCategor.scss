@@ -1,6 +1,7 @@
 .category-dropdown {
     position: relative;
     display: inline-block;
+    width: 100%; // чтобы на мобилке тянулось
 
     /* Кнопка */
     .category-btn {
@@ -9,29 +10,28 @@
         gap: 8px;
         background: #fff;
         border: 1px solid #ddd;
-        padding: 10px 16px;
+        padding: 14px 16px;
         border-radius: 14px;
         cursor: pointer;
-        font-size: 15px;
+        font-size: 16px;
         transition: all .2s ease;
+        width: 100%; // кнопка на всю ширину
 
         &:hover {
             background: #f5f5f5;
         }
     }
 
-    /* Выпадающее меню — ВСЕГДА ОТКРЫТО */
+    /* Выпадающее меню — всегда открыто */
     .category-menu {
-        position: absolute;
-        top: calc(100% + 6px);
-        left: 0;
-        width: 240px;
+        position: relative; // убираем absolute для мобилок
+        width: 100%;
         background: #fff;
         border-radius: 14px;
         padding: 10px 0;
+        margin-top: 10px;
         box-shadow: 0 8px 20px rgba(0,0,0,0.12);
 
-        /* Главное изменение */
         opacity: 1;
         transform: translateY(0);
         pointer-events: auto;
@@ -46,24 +46,44 @@
 
             /* Элемент */
             .category-item {
-                padding: 8px 14px;
+                padding: 12px 16px;
 
                 label {
                     display: flex;
                     align-items: center;
-                    gap: 10px;
+                    gap: 14px;
                     cursor: pointer;
 
-                    /* Чекбокс */
+                    /* Кастомный чекбокс */
                     input[type="checkbox"] {
-                        width: 18px;
-                        height: 18px;
+                        appearance: none;
+                        width: 22px;
+                        height: 22px;
+                        border: 2px solid #bbb;
+                        border-radius: 6px;
                         cursor: pointer;
+                        position: relative;
+                        transition: all .2s ease;
+
+                        &:checked {
+                            background: #4CAF50;
+                            border-color: #4CAF50;
+                        }
+
+                        &:checked::after {
+                            content: "✔";
+                            position: absolute;
+                            top: 50%;
+                            left: 50%;
+                            transform: translate(-50%, -55%);
+                            font-size: 16px;
+                            color: #fff;
+                        }
                     }
 
                     /* Название категории */
                     .category-name {
-                        font-size: 15px;
+                        font-size: 16px;
                     }
                 }
             }
@@ -71,9 +91,14 @@
     }
 }
 
-/* Удаляем полностью логику клика */
-.category-menu.active {
-    opacity: 1;
-    transform: translateY(0);
-    pointer-events: auto;
+/* Десктоп — меню можно сделать абсолютным */
+@media (min-width: 768px) {
+    .category-dropdown {
+        .category-menu {
+            position: absolute;
+            top: calc(100% + 6px);
+            left: 0;
+            width: 240px;
+        }
+    }
 }
