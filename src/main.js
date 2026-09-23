@@ -4,6 +4,10 @@ import { ControllerQuickAdd } from './controllers/ControllerQuickAdd.js';
 import { DefaultLS } from './models/DefaultLS.js';
 
 
+// import { StorageService } from './services/StorageService.js';
+//  new StorageService().remove('quickMenu');
+//  productsAll = [];
+
 new DefaultLS().init();
 new ControllerMenuUp().init();
 new ControllerProgressCard().init();

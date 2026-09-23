@@ -11,19 +11,14 @@ export class QuickMenuModel {
     }
 
     get(key) {
-        let data = this.storageService.get(key);
+        const data = this.storageService.get(key);
 
         if (data === null) {
-            this.#serviceLocalCtorage(key);  
-            data = this.storageService.get(key);  
-        }
+            throw new Error(`Данные "${key}" не инициализированы. Убедись, что DefaultLS.init() был вызван при старте.`);
+        } 
 
-        try {
-            return JSON.parse(data);
-        } catch (e) {
-            this.#serviceLocalCtorage(key);
-            return JSON.parse(this.storageService.get(key));
-        }
+        return data;
+
     }
 
     #serviceLocalCtorage(key)
@@ -31,13 +26,6 @@ export class QuickMenuModel {
         const def = this.products.startProducts();
         this.storageService.set(key, JSON.stringify(def));
     }
-    // set(key, value) {
-    //     localStorage.setItem(key, JSON.stringify(value));
-    // }
-
-    // remove(key) {
-    //     localStorage.removeItem(key);
-    // }
 
     addItem(item) {
         let error = false;
@@ -61,15 +49,6 @@ export class QuickMenuModel {
         this.#productsAll.push(itemEnd2);
         this.#productsAll.push(itemEnd);
         this.storageService.set('quickMenu',this.#productsAll);
-    }
-
-    is_LS(key) {
-        let data = localStorage.getItem(key);
-
-        if (data === null) {
-            return false;
-        }
-        return true;
     }
 
     getProductsAll(key) {
