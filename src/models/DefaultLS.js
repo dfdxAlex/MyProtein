@@ -1,5 +1,5 @@
 import { Products } from "./Products";
-import { StorageService } from './StorageService.js';
+import { StorageService } from '../services/StorageService.js';
 
 
 export class DefaultLS {
@@ -11,7 +11,7 @@ export class DefaultLS {
     init() {
         if (this.storageService.get('quickMenu') === null) {
             const item = this.products.startProducts();
-            this.storageService.set('quickMenu',JSON.stringify(item));
+            this.storageService.set('quickMenu',item);
         }
     }
 }
