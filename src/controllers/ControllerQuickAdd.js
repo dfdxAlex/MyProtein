@@ -10,6 +10,7 @@ export class ControllerQuickAdd {
         this.quickAdd = new QuickAdd();
         this.quickMenuModel = new QuickMenuModel();
         this.quickMenuItemsWievCategor = new QuickMenuItemsWievCategor();
+        // new StorageService().remove('quickMenu');
     }
 
     init() {

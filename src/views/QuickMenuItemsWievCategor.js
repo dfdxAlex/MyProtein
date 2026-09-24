@@ -17,50 +17,50 @@ render() {
             
                 <ul class="category-list">
                     <li class="category-item">
-                        <label>
-                            <input type="checkbox" value="meat">
+                        <label class="category-label">
+                            <input class="category-checkbox" type="checkbox" value="meat">
                             <span class="category-name">Мясо</span>
                         </label>
                     </li>
 
                     <li class="category-item">
-                        <label>
-                            <input type="checkbox" value="fish">
+                        <label class="category-label">
+                            <input class="category-checkbox" type="checkbox" value="fish">
                             <span class="category-name">Рыба</span>
                         </label>
                     </li>
 
                     <li class="category-item">
-                        <label>
-                            <input type="checkbox" value="seafood">
+                        <label class="category-label">
+                            <input class="category-checkbox" type="checkbox" value="seafood">
                             <span class="category-name">Морепродукты</span>
                         </label>
                     </li>
 
                     <li class="category-item">
-                        <label>
-                            <input type="checkbox" value="eggs">
+                        <label class="category-label">
+                            <input class="category-checkbox" type="checkbox" value="eggs">
                             <span class="category-name">Яйца</span>
                         </label>
                     </li>
 
                     <li class="category-item">
-                        <label>
-                            <input type="checkbox" value="dairy">
+                        <label class="category-label">
+                            <input class="category-checkbox" type="checkbox" value="dairy">
                             <span class="category-name">Молочка</span>
                         </label>
                     </li>
 
                     <li class="category-item">
-                        <label>
-                            <input type="checkbox" value="vegan">
+                        <label class="category-label">
+                            <input class="category-checkbox" type="checkbox" value="vegan">
                             <span class="category-name">Растительные белки</span>
                         </label>
                     </li>
 
                     <li class="category-item">
-                        <label>
-                            <input type="checkbox" value="vegan">
+                        <label class="category-label">
+                            <input class="category-checkbox" type="checkbox" value="vegan">
                             <span class="category-name">Вредное</span>
                         </label>
                     </li>
@@ -69,10 +69,7 @@ render() {
                 <span class="cat-icon">Показать</span>
             </button>
             </div>
-
         </div>
-
-
         `);
 }
 }

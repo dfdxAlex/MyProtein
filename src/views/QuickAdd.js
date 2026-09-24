@@ -40,76 +40,23 @@ render(foodItems) {
     document.querySelector('#quick-add').innerHTML = this.#buildingQuickAdd(foodItems);
 }
 
+// вставить событие нажатия на одну из кнопок + или -
 bindEvents() {
 
     // выбрать две кнопки + -
     const buttons = document.querySelectorAll('[data-category-btn]');
-    console.log(buttons[0].innerText);
-    console.log(buttons[1].innerText);
 
-    //
-    buttons[0].addEventListener('click', ()=>{
-        //запомнить текущее содержимое 
-        // let bodyHome = document.body.innerHTML;
-        document.body.innerHTML = this.quickMenuItemsWievCategor;
-
-        // let menuCategory = document.querySelector('[data-category-btn]');
-        // menuCategory.addEventListener('click', );
-        // console.log(menuCategory);
+    //рендернуть в каждую из кнопок меню выбора категорий
+    buttons.forEach((bot)=>{
+        bot.addEventListener('click', ()=>{
+            // вставить кнопки выбора категории
+            // this.quickMenuItemsWievCategor - инъекция из ControllerQuickAdd
+            document.body.innerHTML = this.quickMenuItemsWievCategor;
+        });
     });
 
-document.addEventListener('click', (e) => {
-//     const btn = e.target.closest('[data-category-btn]');
-//     const menu = document.querySelector('[data-category-menu]');
 
-//     if (btn) {
-//         menu.classList.toggle('active');
-//         return;
-//     }
 
-//     if (!e.target.closest('.category-dropdown')) {
-//         menu.classList.remove('active');
-//     }
- });
-
-// document.addEventListener('click', (e) => {
-//     const btn = e.target.closest('[data-category-btn]');
-//     const menu = document.querySelector('[data-category-menu]');
-
-//     if (btn) {
-//         menu.classList.toggle('active');
-//         return;
-//     }
-
-//     if (!e.target.closest('.category-dropdown')) {
-//         menu.classList.remove('active');
-//     }
-// });
-
-    // buttons.forEach(btn => {
-    //     btn.addEventListener('click', () => {
-    //         // console.log('клик по кнопке', btn);
-    //         const buttonPlusAndMinus = document.querySelector("body");
-    //         // console.log('клик по кнопке', buttonPlusAndMinus);
-    //         // console.log(buttonPlusAndMinus);
-    //         // console.log(this.quickMenuItemsWievCategor);
-    //         buttonPlusAndMinus.innerHTML = this.quickMenuItemsWievCategor;
-    //     });
-    // });
-
-    // document.addEventListener('click', (e) => {
-    // const btn = e.target.closest('[data-category-btn]');
-    // const menu = document.querySelector('[data-category-menu]');
-
-    // if (btn) {
-    //     menu.classList.toggle('active');
-    //     return;
-    // }
-
-    // if (!e.target.closest('.category-dropdown')) {
-    //     menu.classList.remove('active');
-    // }
-// });
 
 }
 

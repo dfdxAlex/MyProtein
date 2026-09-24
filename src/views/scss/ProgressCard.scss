@@ -1,11 +1,7 @@
 @import 'root.scss';
 /* PROGRESS CARD */
+@import './mixins/flexCenter.scss';
 
-@mixin center {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
 
 .progress-card {
     @include center;
