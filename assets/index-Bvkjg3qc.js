@@ -96,14 +96,12 @@ var e=(e,t,n)=>()=>{if(n)throw n[0];try{return e&&(t=e(e=0)),t}catch(e){throw n=
             get returns either null or an array ready for use
             set must accept an array and write it to local storage as a JSON string
         `)}}})),y,b=e((()=>{g(),v(),y=class{#e=[];constructor(){this.products=new h,this.storageService=new _}get(e){let t=this.storageService.get(e);if(t===null)throw Error(`Данные "${e}" не инициализированы. Убедись, что DefaultLS.init() был вызван при старте.`);return t}addItem(e){let t=!1;if(typeof e.name!=`string`&&(t=!0),typeof e.protein!=`number`&&(t=!0),typeof e.fat!=`number`&&(t=!0),typeof e.carbs!=`number`&&(t=!0),typeof e.fiber!=`number`&&(t=!0),typeof e.calories!=`number`&&(t=!0),t)throw Error(`Ошибка в объекте продукта`);this.#e=this.storageService.get(`quickMenu`);let n=this.#e.pop(),r=this.#e.pop();this.#e.push(e),this.#e.push(r),this.#e.push(n),this.storageService.set(`quickMenu`,this.#e)}getProductsAll(e){return this.#e=this.storageService.get(e),this.#e}}})),x=e((()=>{})),S,C=e((()=>{x(),S=class{render(){return`
-        <div class="category-dropdown">
-            <button class="category-btn" data-category-btn>
-                <span class="cat-icon">📂</span>
-                <strong>Категории</strong>
-                <button class="cat-close"></button>
-            </button>
-            
-            <div class="category-menu" data-category-menu>
+            <div class="category-dropdown category-menu" data-category-menu>
+                <div class="category-btn" data-category-btn>
+                    <span class="cat-icon">📂</span>
+                    <strong>Категории</strong>
+                    <button class="category-btn-close"></button>
+                </div>
             
                 <ul class="category-list">
                     <li class="category-item">
@@ -159,5 +157,4 @@ var e=(e,t,n)=>()=>{if(n)throw n[0];try{return e&&(t=e(e=0)),t}catch(e){throw n=
                 <span class="cat-icon">Показать</span>
             </button>
             </div>
-        </div>
         `}}})),w,T=e((()=>{m(),b(),C(),w=class{constructor(){this.quickAdd=new p,this.quickMenuModel=new y,this.quickMenuItemsWievCategor=new S}init(){let e=this.quickMenuModel.get(`quickMenu`);this.quickAdd.render(e),this.quickAdd.injectQuickMenuItemsWievCategor(this.quickMenuItemsWievCategor.render()),this.quickAdd.bindEvents()}}})),E,D=e((()=>{g(),v(),E=class{constructor(){this.products=new h,this.storageService=new _}init(){if(this.storageService.get(`quickMenu`)===null){let e=this.products.startProducts();this.storageService.set(`quickMenu`,e)}}}}));t((()=>{o(),d(),T(),D(),new E().init(),new a().init(),new u().init(),new w().init()}))();
