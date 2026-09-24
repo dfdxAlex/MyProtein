@@ -1,5 +1,11 @@
 @import './mixins/flexCenter.scss';
 
+$color-primary: #4CAF50;
+$color-white: #fff;
+$color-border: #ddd;
+$radius-sm: 6px;
+$radius-md: 14px;
+$transition-fast: .2s ease;
 
 .category-dropdown {
     position: relative;
@@ -11,13 +17,13 @@
         display: flex;
         align-items: center;
         gap: 8px;
-        background: #fff;
-        border: 1px solid #ddd;
+        background: $color-white;
+        border: 1px solid $color-border;
         padding: 14px 16px;
-        border-radius: 14px;
+        border-radius: $radius-md;
         cursor: pointer;
         font-size: 16px;
-        transition: all .2s ease;
+        transition: all $transition-fast;
         width: 100%;
         position: relative; /* для позиціонування cat-close */
 
@@ -36,13 +42,13 @@
         width: 22px;
         height: 22px;
         border: 2px solid #bbb;
-        border-radius: 6px;
+        border-radius: $radius-sm;
         cursor: pointer;
         position: relative;
-        transition: all .2s ease;
+        transition: all $transition-fast;
             &:checked {
-            background: #4CAF50;
-            border-color: #4CAF50;
+            background: $color-primary;
+            border-color: $color-primary;
         }
 
         &:checked::after {
@@ -52,7 +58,7 @@
             left: 50%;
             transform: translate(-50%, -55%);
             font-size: 16px;
-            color: #fff;
+            color: $color-white;
         }
     }
     .category-label {
@@ -72,8 +78,8 @@
     .category-menu {
         position: relative;
         width: 100%;
-        background: #fff;
-        border-radius: 14px;
+        background: $color-white;
+        border-radius: $radius-md;
         padding: 10px 0;
         margin-top: 10px;
         box-shadow: 0 8px 20px rgba(0,0,0,0.12);
@@ -82,7 +88,7 @@
         pointer-events: auto;
         transition: all .25s ease;
     }
-    .cat-close {
+    .category-btn-close {
         position: absolute;
         top: 6px;
         right: 6px;
@@ -97,7 +103,7 @@
         border: 1px solid #ccc;
 
         cursor: pointer;
-        transition: all .2s ease;
+        transition: all $transition-fast;
 
         font-size: 16px;
         color: #555;
@@ -139,7 +145,7 @@
             padding: 14px 0;
         }
 
-        .cat-close {
+        .category-btn-close {
             width: 40px;
             height: 40px;
             font-size: 22px;

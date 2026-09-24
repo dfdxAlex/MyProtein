@@ -6,14 +6,12 @@ export class QuickMenuItemsWievCategor {
 
 render() {
     return(`
-        <div class="category-dropdown">
-            <button class="category-btn" data-category-btn>
-                <span class="cat-icon">📂</span>
-                <strong>Категории</strong>
-                <button class="cat-close"></button>
-            </button>
-            
-            <div class="category-menu" data-category-menu>
+            <div class="category-dropdown category-menu" data-category-menu>
+                <div class="category-btn" data-category-btn>
+                    <span class="cat-icon">📂</span>
+                    <strong>Категории</strong>
+                    <button class="category-btn-close"></button>
+                </div>
             
                 <ul class="category-list">
                     <li class="category-item">
@@ -69,7 +67,6 @@ render() {
                 <span class="cat-icon">Показать</span>
             </button>
             </div>
-        </div>
         `);
 }
 }
