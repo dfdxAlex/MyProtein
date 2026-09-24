@@ -4,10 +4,25 @@ import { StorageService } from '../services/StorageService.js';
 export class QuickMenuModel {
 
     #productsAll = [];
+    #itemsLi = [];
 
     constructor() {
         this.products = new Products();
         this.storageService = new StorageService();
+
+        this.#itemsLi = [
+            {name:'Мясо',value:'meat'},
+            {name:'Рыба',value:'fish'},
+            {name:'Морепродукты',value:'seafood'},
+            {name:'Яйца',value:'eggs'},
+            {name:'Молочка',value:'dairy'},
+            {name:'Растительные белки',value:'vegan'},
+            {name:'Остальное',value:'rest'}
+        ];
+    }
+
+    getItemsLi() {
+        return this.#itemsLi;
     }
 
     get(key) {
@@ -39,9 +54,6 @@ export class QuickMenuModel {
 
         this.#productsAll = this.storageService.get('quickMenu');
         
-//  this.remove('quickMenu');
-//  productsAll = [];
-
         const itemEnd = this.#productsAll.pop();
         const itemEnd2 = this.#productsAll.pop();
         

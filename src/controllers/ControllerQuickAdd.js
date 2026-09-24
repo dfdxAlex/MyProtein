@@ -11,13 +11,16 @@ export class ControllerQuickAdd {
         this.quickMenuModel = new QuickMenuModel();
         this.quickMenuItemsWievCategor = new QuickMenuItemsWievCategor();
         // new StorageService().remove('quickMenu');
+        this.itemsLi = this.quickMenuModel.getItemsLi();
     }
 
     init() {
         let items = this.quickMenuModel.get('quickMenu');
         this.quickAdd.render(items);
 
-        this.quickAdd.injectQuickMenuItemsWievCategor(this.quickMenuItemsWievCategor.render())
+        // рендер меню категорий
+        this.quickAdd.injectQuickMenuItemsWievCategor(this.quickMenuItemsWievCategor.render(this.itemsLi))
+        // события на меню категорий
         this.quickAdd.bindEvents();
     }
 

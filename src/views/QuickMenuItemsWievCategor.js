@@ -4,69 +4,37 @@ import './scss/QuickMenuItemsWievCategor.scss';
 
 export class QuickMenuItemsWievCategor {
 
-render() {
+render(items) {
+    const itemsLi = this.#createItems(items);
     return(`
-            <div class="category-dropdown category-menu" data-category-menu>
+        <div class="category-dropdown">
+            <div class="category-menu" data-category-menu>
                 <div class="category-btn" data-category-btn>
                     <span class="cat-icon">📂</span>
                     <strong>Категории</strong>
                     <button class="category-btn-close"></button>
                 </div>
-            
                 <ul class="category-list">
-                    <li class="category-item">
-                        <label class="category-label">
-                            <input class="category-checkbox" type="checkbox" value="meat">
-                            <span class="category-name">Мясо</span>
-                        </label>
-                    </li>
-
-                    <li class="category-item">
-                        <label class="category-label">
-                            <input class="category-checkbox" type="checkbox" value="fish">
-                            <span class="category-name">Рыба</span>
-                        </label>
-                    </li>
-
-                    <li class="category-item">
-                        <label class="category-label">
-                            <input class="category-checkbox" type="checkbox" value="seafood">
-                            <span class="category-name">Морепродукты</span>
-                        </label>
-                    </li>
-
-                    <li class="category-item">
-                        <label class="category-label">
-                            <input class="category-checkbox" type="checkbox" value="eggs">
-                            <span class="category-name">Яйца</span>
-                        </label>
-                    </li>
-
-                    <li class="category-item">
-                        <label class="category-label">
-                            <input class="category-checkbox" type="checkbox" value="dairy">
-                            <span class="category-name">Молочка</span>
-                        </label>
-                    </li>
-
-                    <li class="category-item">
-                        <label class="category-label">
-                            <input class="category-checkbox" type="checkbox" value="vegan">
-                            <span class="category-name">Растительные белки</span>
-                        </label>
-                    </li>
-
-                    <li class="category-item">
-                        <label class="category-label">
-                            <input class="category-checkbox" type="checkbox" value="vegan">
-                            <span class="category-name">Вредное</span>
-                        </label>
-                    </li>
+                    ${itemsLi}
                 </ul>
             <button class="category-btn">
                 <span class="cat-icon">Показать</span>
             </button>
             </div>
+        </div>
         `);
 }
+
+#createItems(items) {
+        return items.map(({name, value}) => {
+        return(`  
+                    <li class="category-item">
+                        <label class="category-label">
+                            <input class="category-checkbox" type="checkbox" value="${value}">
+                            <span class="category-name">${name}</span>
+                        </label>
+                    </li>
+                    `);    
+        }).join('');
+    }
 }
