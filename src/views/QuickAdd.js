@@ -3,7 +3,7 @@ import './scss/QuickAdd.scss';
 export class QuickAdd {
 
 #buildingQuickAdd(foodItems) {
-    let rezultStr = foodItems.reduce((str = '', curr) => {
+    let rezultStr = foodItems.reduce((str, curr) => {
         if (curr.icon !== '➕' && curr.icon !== '➖')
         return(str + `  <button class="quick-item">
                             <span class="food-icon">${curr.icon}</span>
@@ -14,7 +14,7 @@ export class QuickAdd {
                         </button>
                     `);
         else {
-        return(str + `  <button class="quick-item" data-category-btn>
+        return(str + `  <button class="quick-item add-or-del-product" data-category-btn>
                             <span class="food-icon">${curr.icon}</span>
                             <span>
                                 <strong>${curr.name}</strong>
@@ -51,13 +51,9 @@ bindEvents() {
         bot.addEventListener('click', ()=>{
             // вставить кнопки выбора категории
             // this.quickMenuItemsWievCategor - инъекция из ControllerQuickAdd
-            document.body.innerHTML = this.quickMenuItemsWievCategor;
+            document.getElementById('menu-up').innerHTML = this.quickMenuItemsWievCategor;
         });
     });
-
-
-
-
 }
 
 injectQuickMenuItemsWievCategor(quickMenuItemsWievCategor)

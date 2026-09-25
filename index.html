@@ -11,14 +11,12 @@
 <body>
 
     <script type="module"></script>
-
-    <div class="app" id="menu-up"></div>
-    <div class="app" id="progress-card"></div>
-    <div class="app" id="quick-add"></div>
-
-<div class="app">
-
-    <!-- Today's food -->
+    <div id="app">
+        <div class="app" id="menu-up"></div>
+        <div class="app" id="progress-card"></div>
+        <div class="app" id="quick-add"></div>
+        <div class="app" id="food-today">
+   <!-- Today's food -->
     <section class="food-section">
 
         <div class="section-title">
@@ -71,16 +69,22 @@
 
         </div>
 
+
+
     </section>
 
+        </div>
+    </div>
 
-    <!-- Add button -->
-    <button class="add-button">
-        <span>+</span>
-        Добавить продукт
-    </button>
+    <div class="app" id="add-button">
+        <!-- Add button -->
+        <button class="add-button">
+            <span>+</span>
+            Добавить продукт
+        </button>
+    </div>
 
-
+    <div class="app" id="bottom-nav">
     <!-- Bottom navigation -->
     <nav class="bottom-nav">
 
@@ -100,8 +104,7 @@
         </button>
 
     </nav>
-
-</div>
+    </div>
 
 </body>
 </html>

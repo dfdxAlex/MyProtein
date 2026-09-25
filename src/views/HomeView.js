@@ -20,6 +20,7 @@ set Header([setToday, setProtein]) {
 }
 
 render() {
+    console.log(document.querySelector('#menu-up'));
     document.querySelector('#menu-up').innerHTML = this._Header;
 }
 

@@ -37,4 +37,13 @@ render(items) {
                     `);    
         }).join('');
     }
+
+// bindEvents() {
+//     // выбрать крестик и акинуть событие
+//     const buttonClose = document.querySelector('.category-btn-close');
+
+//             console.log('knok');
+
+// }
+
 }
