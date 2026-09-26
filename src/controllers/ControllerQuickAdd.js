@@ -15,10 +15,5 @@ export class ControllerQuickAdd {
     init() {
         let items = this.quickMenuModel.get('quickMenu');
         this.quickAdd.render(items);
-
-        // рендер меню категорий
-        // this.quickAdd.injectQuickMenuItemsWievCategor(this.quickMenuItemsWievCategor.render(this.itemsLi))
-        // события на меню категорий
-        // this.quickAdd.bindEvents(); тут
     }
 }
