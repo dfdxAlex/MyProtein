@@ -68,4 +68,5 @@ export class QuickMenuModel {
         return this.#productsAll;
     }
 
+
 }

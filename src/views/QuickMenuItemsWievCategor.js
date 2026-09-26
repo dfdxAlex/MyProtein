@@ -17,7 +17,7 @@ render(items) {
                 <ul class="category-list">
                     ${itemsLi}
                 </ul>
-            <button class="category-btn">
+            <button class="category-btn button-seed-category">
                 <span class="cat-icon">Показать</span>
             </button>
             </div>
@@ -38,12 +38,10 @@ render(items) {
         }).join('');
     }
 
-// bindEvents() {
-//     // выбрать крестик и акинуть событие
-//     const buttonClose = document.querySelector('.category-btn-close');
-
-//             console.log('knok');
-
-// }
+selectedCategory() {
+    const categoryCheckbox = document.querySelectorAll('input[type="checkbox"]:checked');
+    const result = [...categoryCheckbox].map(ch => ch.value);
+    return result;
+}
 
 }

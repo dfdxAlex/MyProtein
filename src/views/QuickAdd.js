@@ -41,24 +41,26 @@ render(foodItems) {
 }
 
 // вставить событие нажатия на одну из кнопок + или -
-bindEvents() {
+// bindEvents() {
 
-    // выбрать две кнопки + -
-    const buttons = document.querySelectorAll('[data-category-btn]');
+//     // выбрать две кнопки + -
+//     const buttons = document.querySelectorAll('[data-category-btn]');
 
-    //рендернуть в каждую из кнопок меню выбора категорий
-    buttons.forEach((bot)=>{
-        bot.addEventListener('click', ()=>{
-            // вставить кнопки выбора категории
-            // this.quickMenuItemsWievCategor - инъекция из ControllerQuickAdd
-            document.getElementById('menu-up').innerHTML = this.quickMenuItemsWievCategor;
-        });
-    });
-}
+//     //рендернуть в каждую из кнопок меню выбора категорий
+//     buttons.forEach((bot)=>{
+//         bot.addEventListener('click', ()=>{
+//             // вставить кнопки выбора категории
+//             // this.quickMenuItemsWievCategor - инъекция из ControllerQuickAdd
+//             // document.getElementById('menu-up').innerHTML = this.quickMenuItemsWievCategor;
+//             document.getElementById('quick-add').innerHTML = this.quickMenuItemsWievCategor;
+//             console.log('рендер в quick-add');
+//         });
+//     });
+// }
 
-injectQuickMenuItemsWievCategor(quickMenuItemsWievCategor)
-{
-    this.quickMenuItemsWievCategor = quickMenuItemsWievCategor;
-}
+// injectQuickMenuItemsWievCategor(quickMenuItemsWievCategor)
+// {
+//     this.quickMenuItemsWievCategor = quickMenuItemsWievCategor;
+// }
 
 }
