@@ -7,8 +7,13 @@ export class QuickMenuModel {
     #itemsLi = [];
 
     constructor() {
-        this.products = new Products();
+        
         this.storageService = new StorageService();
+
+        // класс продуктов, передаем ему менеджера локального хранилища
+        this.products = new Products(this.storageService);
+        this.products.init();
+        console.log(this.products.products);
 
         this.#itemsLi = [
             {name:'Мясо',value:'meat'},
