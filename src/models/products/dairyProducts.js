@@ -1,0 +1,26 @@
+export const dairyProducts = [
+  { name: "Молоко 0.5%", icon: "🥛", protein: 3.4, fat: 0.5, carbs: 4.8, fiber: 0, sugar: 4.8, salt: 0.10, calories: 35 },
+  { name: "Молоко 1.5%", icon: "🥛", protein: 3.3, fat: 1.5, carbs: 4.8, fiber: 0, sugar: 4.8, salt: 0.10, calories: 44 },
+  { name: "Молоко 2.5%", icon: "🥛", protein: 3.2, fat: 2.5, carbs: 4.7, fiber: 0, sugar: 4.7, salt: 0.10, calories: 52 },
+  { name: "Молоко 3.2%", icon: "🥛", protein: 3.0, fat: 3.2, carbs: 4.7, fiber: 0, sugar: 4.7, salt: 0.10, calories: 60 },
+  { name: "Кефир 1%", icon: "🥛", protein: 3.0, fat: 1.0, carbs: 4.0, fiber: 0, sugar: 4.0, salt: 0.10, calories: 40 },
+  { name: "Кефир 2.5%", icon: "🥛", protein: 3.0, fat: 2.5, carbs: 4.0, fiber: 0, sugar: 4.0, salt: 0.10, calories: 53 },
+  { name: "Йогурт натуральный", icon: "🥛", protein: 4.3, fat: 2.0, carbs: 6.0, fiber: 0, sugar: 5.5, salt: 0.10, calories: 60 },
+  { name: "Йогурт греческий", icon: "🥛", protein: 9.0, fat: 2.0, carbs: 4.0, fiber: 0, sugar: 4.0, salt: 0.10, calories: 75 },
+  { name: "Йогурт фруктовый", icon: "🍓", protein: 3.5, fat: 2.5, carbs: 13.0, fiber: 0, sugar: 12.0, salt: 0.10, calories: 95 },
+  { name: "Творог 0%", icon: "🧀", protein: 18.0, fat: 0.5, carbs: 3.0, fiber: 0, sugar: 3.0, salt: 0.10, calories: 80 },
+  { name: "Творог 5%", icon: "🧀", protein: 17.0, fat: 5.0, carbs: 3.0, fiber: 0, sugar: 3.0, salt: 0.10, calories: 121 },
+  { name: "Творог 9%", icon: "🧀", protein: 16.0, fat: 9.0, carbs: 3.0, fiber: 0, sugar: 3.0, salt: 0.10, calories: 160 },
+  { name: "Сметана 10%", icon: "🥛", protein: 3.0, fat: 10.0, carbs: 3.0, fiber: 0, sugar: 3.0, salt: 0.08, calories: 115 },
+  { name: "Сметана 20%", icon: "🥛", protein: 2.8, fat: 20.0, carbs: 3.2, fiber: 0, sugar: 3.2, salt: 0.08, calories: 206 },
+  { name: "Моцарелла", icon: "🧀", protein: 22.0, fat: 17.0, carbs: 2.0, fiber: 0, sugar: 1.0, salt: 0.70, calories: 280 },
+  { name: "Гауда", icon: "🧀", protein: 25.0, fat: 27.0, carbs: 2.0, fiber: 0, sugar: 0.5, salt: 1.80, calories: 356 },
+  { name: "Чеддер", icon: "🧀", protein: 25.0, fat: 33.0, carbs: 1.0, fiber: 0, sugar: 0.5, salt: 1.80, calories: 403 },
+  { name: "Пармезан", icon: "🧀", protein: 35.0, fat: 28.0, carbs: 3.0, fiber: 0, sugar: 0.5, salt: 1.60, calories: 390 },
+  { name: "Фета", icon: "🧀", protein: 14.0, fat: 21.0, carbs: 4.0, fiber: 0, sugar: 4.0, salt: 2.50, calories: 265 },
+  { name: "Масло сливочное 82%", icon: "🧈", protein: 0.5, fat: 82.0, carbs: 0.8, fiber: 0, sugar: 0.8, salt: 0.02, calories: 748 },
+  { name: "Сырники", icon: "🥞", protein: 15.0, fat: 12.0, carbs: 18.0, fiber: 0, sugar: 7.0, salt: 0.40, calories: 240 },
+  { name: "Творожная запеканка", icon: "🍰", protein: 12.0, fat: 6.0, carbs: 16.0, fiber: 0, sugar: 10.0, salt: 0.25, calories: 170 },
+  { name: "Творог со сметаной", icon: "🧀", protein: 14.0, fat: 8.0, carbs: 3.0, fiber: 0, sugar: 3.0, salt: 0.10, calories: 140 }
+  
+];

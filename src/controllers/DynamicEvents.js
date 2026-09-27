@@ -42,7 +42,6 @@ export class DynamicEvents {
 
             // если нажата кнопка показать продукты в выборе категорий
             if (e.target.closest('.button-seed-category')) {
-                // this.quickMenuModel.getSellectCategory();
                 const listCat = this.quickMenuItemsWievCategor.selectedCategory();
                 this.clearLayout(this.Layouts);
                 console.log('Показать',listCat);

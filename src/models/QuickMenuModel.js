@@ -17,6 +17,7 @@ export class QuickMenuModel {
             {name:'Яйца',value:'eggs'},
             {name:'Молочка',value:'dairy'},
             {name:'Растительные белки',value:'vegan'},
+            {name:'Орехи и семечки',value:'nuts'},
             {name:'Остальное',value:'rest'}
         ];
     }
