@@ -1,4 +1,4 @@
-export const otherProducts = [
+export const restProducts = [
   { name: "Хлеб белый", icon: "🍞", protein: 8, fat: 3, carbs: 50, fiber: 2, sugar: 3, salt: 1.2, calories: 265 },
   { name: "Хлеб цельнозерновой", icon: "🍞", protein: 10, fat: 3, carbs: 43, fiber: 7, sugar: 4, salt: 1.1, calories: 247 },
   { name: "Багет", icon: "🥖", protein: 8, fat: 1, carbs: 57, fiber: 2, sugar: 2, salt: 1.4, calories: 275 },

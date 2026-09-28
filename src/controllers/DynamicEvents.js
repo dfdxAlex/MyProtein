@@ -1,5 +1,6 @@
 import { QuickMenuItemsWievCategor } from '../views/QuickMenuItemsWievCategor.js';
 import { QuickMenuModel } from '../models/QuickMenuModel.js';
+import { Products } from '../models/Products.js';
 
 export class DynamicEvents {
 
@@ -16,6 +17,9 @@ export class DynamicEvents {
         // массив со всеми полями для очистки, если нужно очистить не все, то добавить отдельный 
         // массив в clearLayout
         this.Layouts = ['menu-up', 'progress-card', 'quick-add', 'food-today', 'add-button', 'bottom-nav'];
+
+        // жестко подключить модель с продуктами
+        this.products = new Products();
 
     }
 
@@ -42,9 +46,14 @@ export class DynamicEvents {
 
             // если нажата кнопка показать продукты в выборе категорий
             if (e.target.closest('.button-seed-category')) {
+
+                // список выбранных категорий в массив получить
                 const listCat = this.quickMenuItemsWievCategor.selectedCategory();
+                // очистить поля
                 this.clearLayout(this.Layouts);
-                console.log('Показать',listCat);
+
+                // console.log(listCat);
+                console.log(this.products.getProducts(listCat));
             }
             
         });

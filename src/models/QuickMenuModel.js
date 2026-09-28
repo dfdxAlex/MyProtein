@@ -13,17 +13,16 @@ export class QuickMenuModel {
         // класс продуктов, передаем ему менеджера локального хранилища
         this.products = new Products(this.storageService);
         this.products.init();
-        console.log(this.products.products);
 
         this.#itemsLi = [
-            {name:'Мясо',value:'meat'},
-            {name:'Рыба',value:'fish'},
-            {name:'Морепродукты',value:'seafood'},
-            {name:'Яйца',value:'eggs'},
-            {name:'Молочка',value:'dairy'},
-            {name:'Растительные белки',value:'vegan'},
-            {name:'Орехи и семечки',value:'nuts'},
-            {name:'Остальное',value:'rest'}
+            {name:'Мясо',value:'meatProducts'},
+            {name:'Рыба',value:'fishProducts'},
+            {name:'Морепродукты',value:'seafoodProducts'},
+            {name:'Яйца',value:'eggProducts'},
+            {name:'Молочка',value:'dairyProducts'},
+            {name:'Растительные белки',value:'veganProducts'},
+            {name:'Орехи и семечки',value:'nutsProducts'},
+            {name:'Остальное',value:'restProducts'}
         ];
     }
 
@@ -69,10 +68,11 @@ export class QuickMenuModel {
         this.storageService.set('quickMenu',this.#productsAll);
     }
 
-    getProductsAll(key) {
-        this.#productsAll = this.storageService.get(key);
-        return this.#productsAll;
-    }
+    // //метод возвращает массив с пунктами продуктов.
+    // getProductsAll(key) {
+    //     this.#productsAll = this.storageService.get(key);
+    //     return this.#productsAll;
+    // }
 
 
 }

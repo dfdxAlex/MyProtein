@@ -38,8 +38,10 @@ render(items) {
         }).join('');
     }
 
+    // метод возвращает список выбранных категорий в виде массива
 selectedCategory() {
     const categoryCheckbox = document.querySelectorAll('input[type="checkbox"]:checked');
+    
     const result = [...categoryCheckbox].map(ch => ch.value);
     return result;
 }

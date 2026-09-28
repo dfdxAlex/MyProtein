@@ -1,4 +1,4 @@
-export const nutsAndSeedsProducts = [
+export const nutsProducts = [
   { name: "Миндаль", icon: "🌰", protein: 21, fat: 50, carbs: 22, fiber: 12, sugar: 4, salt: 0.01, calories: 579 },
   { name: "Грецкий орех", icon: "🌰", protein: 15, fat: 65, carbs: 14, fiber: 7, sugar: 3, salt: 0.01, calories: 654 },
   { name: "Фундук", icon: "🌰", protein: 15, fat: 61, carbs: 17, fiber: 10, sugar: 4, salt: 0.01, calories: 628 },
