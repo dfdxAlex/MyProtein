@@ -1,26 +1,27 @@
-import { QuickMenuItemsWievCategor } from '../views/QuickMenuItemsWievCategor.js';
-import { QuickMenuModel } from '../models/QuickMenuModel.js';
-import { Products } from '../models/Products.js';
+// класс управляет событиями для прохождения этапа добавления пунктов в быстрое меню
 
-export class DynamicEvents {
+export class AppController {
 
-    constructor (controllerMenuUp, controllerProgressCard, controllerQuickAdd) {
-        this.app = document.getElementById("app");
-        this.quickMenuItemsWievCategor = new QuickMenuItemsWievCategor();
+    constructor ({app,
+                  controllerMenuUp, 
+                  controllerProgressCard, 
+                  controllerQuickAdd, 
+                  products,
+                  quickMenuModel,
+                  quickMenuItemsWievCategor}) {
 
-        this.quickMenuModel = new QuickMenuModel();
+        this.app = app;
 
+        this.quickMenuItemsWievCategor = quickMenuItemsWievCategor;
         this.controllerMenuUp = controllerMenuUp;
         this.controllerProgressCard = controllerProgressCard;
         this.controllerQuickAdd = controllerQuickAdd;
+        this.products = products;
+        this.quickMenuModel = quickMenuModel;
 
         // массив со всеми полями для очистки, если нужно очистить не все, то добавить отдельный 
         // массив в clearLayout
         this.Layouts = ['menu-up', 'progress-card', 'quick-add', 'food-today', 'add-button', 'bottom-nav'];
-
-        // жестко подключить модель с продуктами
-        this.products = new Products();
-
     }
 
     init() {
@@ -52,7 +53,7 @@ export class DynamicEvents {
                 // очистить поля
                 this.clearLayout(this.Layouts);
 
-                // console.log(listCat);
+                // есть массив с продуктами, остается сделать вьюху на вывод
                 console.log(this.products.getProducts(listCat));
             }
             
