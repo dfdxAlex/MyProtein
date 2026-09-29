@@ -8,16 +8,20 @@ import { Products } from './models/Products.js';
 import { QuickMenuModel } from './models/QuickMenuModel.js';
 
 import { QuickMenuItemsWievCategor } from './views/QuickMenuItemsWievCategor.js';
+import { QuickAdd } from './views/QuickAdd.js';
 
 import { StorageService } from './services/StorageService.js';
 
 const storageService = new StorageService();
 
-const products = new Products();
+const products = new Products({storageService});
+products.init();
 const defaultLS = new DefaultLS({storageService, 
                                  products});
 defaultLS.init();
-const quickMenuModel = new QuickMenuModel();
+
+const quickMenuModel = new QuickMenuModel({storageService, products});
+const quickAdd = new QuickAdd();
 
 const quickMenuItemsWievCategor = new QuickMenuItemsWievCategor();
 
@@ -25,7 +29,7 @@ const controllerMenuUp = new ControllerMenuUp();
 controllerMenuUp.init();
 const controllerProgressCard = new ControllerProgressCard();
 controllerProgressCard.init();
-const controllerQuickAdd = new ControllerQuickAdd();
+const controllerQuickAdd = new ControllerQuickAdd({quickAdd, quickMenuModel});
 controllerQuickAdd.init();
 
 

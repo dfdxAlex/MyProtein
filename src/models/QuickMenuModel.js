@@ -1,18 +1,16 @@
-import { Products } from "./Products";
-import { StorageService } from '../services/StorageService.js';
 
 export class QuickMenuModel {
 
     #productsAll = [];
     #itemsLi = [];
 
-    constructor() {
+    constructor({storageService, 
+                 products}) {
         
-        this.storageService = new StorageService();
+        this.storageService = storageService;
 
         // класс продуктов, передаем ему менеджера локального хранилища
-        this.products = new Products(this.storageService);
-        this.products.init();
+        this.products = products;
 
         this.#itemsLi = [
             {name:'Мясо',value:'meatProducts'},
@@ -67,12 +65,5 @@ export class QuickMenuModel {
         this.#productsAll.push(itemEnd);
         this.storageService.set('quickMenu',this.#productsAll);
     }
-
-    // //метод возвращает массив с пунктами продуктов.
-    // getProductsAll(key) {
-    //     this.#productsAll = this.storageService.get(key);
-    //     return this.#productsAll;
-    // }
-
 
 }

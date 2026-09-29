@@ -10,7 +10,7 @@ import { veganProducts } from './products/veganProducts.js';
 
 export class Products {
 
-constructor(storageService) {
+constructor({storageService}) {
 
     // принять ссылку на сервис работы с хранилищем
     this.storageService = storageService;

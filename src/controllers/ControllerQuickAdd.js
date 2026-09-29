@@ -1,14 +1,9 @@
-import { QuickAdd } from "../views/QuickAdd";
-import { QuickMenuModel } from "../models/QuickMenuModel.js";
-import { QuickMenuItemsWievCategor } from "../views/QuickMenuItemsWievCategor.js";
-
 
 export class ControllerQuickAdd {
 
-    constructor () {
-        this.quickAdd = new QuickAdd();
-        this.quickMenuModel = new QuickMenuModel();
-        this.quickMenuItemsWievCategor = new QuickMenuItemsWievCategor();
+    constructor ({quickAdd, quickMenuModel}) {
+        this.quickAdd = quickAdd;
+        this.quickMenuModel = quickMenuModel;
         this.itemsLi = this.quickMenuModel.getItemsLi();
     }
 
