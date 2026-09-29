@@ -9,9 +9,14 @@ import { QuickMenuModel } from './models/QuickMenuModel.js';
 
 import { QuickMenuItemsWievCategor } from './views/QuickMenuItemsWievCategor.js';
 
+import { StorageService } from './services/StorageService.js';
 
-new DefaultLS().init();
+const storageService = new StorageService();
+
 const products = new Products();
+const defaultLS = new DefaultLS({storageService, 
+                                 products});
+defaultLS.init();
 const quickMenuModel = new QuickMenuModel();
 
 const quickMenuItemsWievCategor = new QuickMenuItemsWievCategor();

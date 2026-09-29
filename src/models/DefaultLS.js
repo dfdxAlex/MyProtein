@@ -1,11 +1,9 @@
-import { Products } from "./Products";
-import { StorageService } from '../services/StorageService.js';
-
 
 export class DefaultLS {
-    constructor() {
-        this.products = new Products();
-        this.storageService = new StorageService();
+    constructor({storageService, 
+                 products}) {
+        this.products = products;
+        this.storageService = storageService;
     }
 
     init() {
