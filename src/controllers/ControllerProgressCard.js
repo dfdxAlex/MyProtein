@@ -1,9 +1,9 @@
-import { ProgressCard } from "../views/ProgressCard";
+
 
 export class ControllerProgressCard {
 
-    constructor () {
-        this.progressCard = new ProgressCard();
+    constructor ({progressCard}) {
+        this.progressCard = progressCard;
 
     }
 

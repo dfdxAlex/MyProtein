@@ -9,6 +9,8 @@ import { QuickMenuModel } from './models/QuickMenuModel.js';
 
 import { QuickMenuItemsWievCategor } from './views/QuickMenuItemsWievCategor.js';
 import { QuickAdd } from './views/QuickAdd.js';
+import { HomeView } from './views/HomeView.js';
+import { ProgressCard } from "./views/ProgressCard";
 
 import { StorageService } from './services/StorageService.js';
 
@@ -25,10 +27,14 @@ const quickAdd = new QuickAdd();
 
 const quickMenuItemsWievCategor = new QuickMenuItemsWievCategor();
 
-const controllerMenuUp = new ControllerMenuUp();
+const homeView = new HomeView();
+const controllerMenuUp = new ControllerMenuUp({homeView});
 controllerMenuUp.init();
-const controllerProgressCard = new ControllerProgressCard();
+
+const progressCard = new ProgressCard();
+const controllerProgressCard = new ControllerProgressCard({progressCard});
 controllerProgressCard.init();
+
 const controllerQuickAdd = new ControllerQuickAdd({quickAdd, quickMenuModel});
 controllerQuickAdd.init();
 
